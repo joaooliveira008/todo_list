@@ -17,7 +17,17 @@ const createTodo = (req, res) => {
     res.json(Todo);
 };
 
+const updateTodo = (req, res) => {
+    const { id } = req.params;
+    const { completed } = req.body;
+
+    const todo = todoService.updateTodo(id, completed);
+
+    res.json(todo);
+};
+
 module.exports = {
     getTodos,
-    createTodo
+    createTodo,
+    updateTodo
 };

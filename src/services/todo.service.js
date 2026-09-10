@@ -24,5 +24,6 @@ const createTodo = (title) => {
 
 module.exports = {
     getTodos,
-    createTodo
+    createTodo,
+    updateTodo
 };

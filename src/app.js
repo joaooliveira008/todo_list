@@ -5,6 +5,7 @@ const port = 3000;
 
 // Middleware to parse JSON requests
 app.use(express.json()); 
+
 app.use(todoRoutes);
 
 app.listen (port, () => {
