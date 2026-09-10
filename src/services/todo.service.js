@@ -4,9 +4,12 @@ const getTodos = () => {
     return todos;
 };
 
-module.exports = {
-    getTodos,
-    createTodo
+const updateTodo = (id, completed) => {
+    const todo = todos.find(todo => todo.id === Number(id));
+    if (todo) {
+        todo.completed = completed;
+    }
+    return todo;
 };
 
 const createTodo = (title) => {
@@ -18,3 +21,8 @@ const createTodo = (title) => {
     todos.push(todo);
     return todo;
 }
+
+module.exports = {
+    getTodos,
+    createTodo
+};

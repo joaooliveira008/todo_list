@@ -3,7 +3,7 @@ const getTodos = (req, res) => {
     res.json(todos);
 };
 
-const todoService = require('../services/todo_service');
+const todoService = require('../services/todo.service');
 
 module.exports = {
     getTodos
