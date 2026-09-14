@@ -22,8 +22,22 @@ const createTodo = (title) => {
     return todo;
 }
 
+const deleteTodo = (id) => {
+    const index = todos.findIndex(todo => todo.id === Number(id));
+
+    if (index === -1) {
+        return null;
+    }
+
+    const removido = todos.splice(index, 1)[0];
+    return removido;
+};
 module.exports = {
     getTodos,
     createTodo,
-    updateTodo
+    updateTodo,
+    deleteTodo
 };
+    
+
+    
