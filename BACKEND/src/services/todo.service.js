@@ -1,9 +1,9 @@
 const db = require('../database/database')
 
 
-const getTodos = () => {
-    const todos = db.prepare('SELECT * FROM todos').all();
-    return todos.map(todo => ({
+const getTodo = () => {
+    const todo = db.prepare('SELECT * FROM todos').all();
+    return todo.map(todo => ({
         id: todo.id,
         title: todo.title,
         completed: Boolean(todo.completed)
@@ -56,7 +56,7 @@ const deleteTodo = (id) => {
     
 
 module.exports = {
-    getTodos,
+    getTodo,
     createTodo,
     updateTodo,
     deleteTodo,

@@ -1,6 +1,6 @@
 const getTodos = (req, res) => {
-    const todos = todoService.getTodos();
-    res.json(todos);
+    const todo = todoService.getTodos();
+    res.json(todo);
 };
 
 const todoService = require('../services/todo.service');
